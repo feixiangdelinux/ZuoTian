@@ -8,9 +8,7 @@ from util.MouseUtil import MouseUtil
 from util.ZuoTianUtil import replenish_piece, fly_destination, click_task
 
 
-def zuo_tian(path):
-    four = 3
-    nineteen = 19
+def zuo_tian(path, four, nineteen):
     lis = get_flight_flag_info(path)
     spare_flag = get_flag_name(lis, '备用棋')
     buy_flag = get_flag_name(lis, '长安杂货店(12,11)')
@@ -84,15 +82,15 @@ if __name__ == '__main__':
     t = time.time()
     for i in range(9):
         # 再世情缘
-        zuo_tian('./a979899.txt')
+        zuo_tian('./a979899.txt', 3, 19)
         # 大闹天宫
-        # zuo_tian('./b979899.txt')
+        # zuo_tian('./b979899.txt', 3, 19)
         # 二阶堂红丸
-        # zuo_tian('./c979899.txt')
+        # zuo_tian('./c979899.txt', 3, 19)
         # 拉尔夫
-        # zuo_tian('./d979899.txt')
+        # zuo_tian('./d979899.txt', 3, 19)
         # 拉尔夫
-        # zuo_tian('./f979899.txt')
+        # zuo_tian('./f979899.txt', 3, 19)
         print(i + 1)
     a = time.time()
     print(int(a) - int(t))
