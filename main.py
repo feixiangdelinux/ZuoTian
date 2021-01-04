@@ -80,15 +80,19 @@ def send_mail(message):
 
 if __name__ == '__main__':
     t = time.time()
-    for i in range(9):
-        # 再世情缘
-        zuo_tian('./a979899.txt', 3, 19)
+    for i in range(50):
+        # # 再世情缘
+        # zuo_tian('./a979899.txt', 3, 19)
+
         # 大闹天宫
-        # zuo_tian('./b979899.txt', 3, 19)
+        zuo_tian('./b979899.txt', 3, 19)
+
         # 二阶堂红丸
         # zuo_tian('./c979899.txt', 3, 19)
+
         # 拉尔夫
         # zuo_tian('./d979899.txt', 3, 19)
+
         # 拉尔夫
         # zuo_tian('./f979899.txt', 3, 19)
         print(i + 1)
