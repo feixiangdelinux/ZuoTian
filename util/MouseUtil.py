@@ -11,7 +11,7 @@ class MouseUtil:
         :param int dx: 水平位置.
         :param int dy: 垂直位置.
         """
-        time.sleep(1)
+        # time.sleep(1)
         self.mouse.position = (dx, dy)
 
     def click_left(self):
