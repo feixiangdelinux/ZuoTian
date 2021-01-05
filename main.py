@@ -81,11 +81,11 @@ def send_mail(message):
 if __name__ == '__main__':
     t = time.time()
     for i in range(50):
-        # # 再世情缘
-        # zuo_tian('./a979899.txt', 3, 19)
+        # 再世情缘
+        zuo_tian('./a979899.txt', 3, 19)
 
-        # 大闹天宫
-        zuo_tian('./b979899.txt', 3, 19)
+        # # 大闹天宫
+        # zuo_tian('./b979899.txt', 3, 19)
 
         # 二阶堂红丸
         # zuo_tian('./c979899.txt', 3, 19)
@@ -98,4 +98,5 @@ if __name__ == '__main__':
         print(i + 1)
     a = time.time()
     print(int(a) - int(t))
+    MouseUtil().left_click(785, 15)
     send_mail('大话西游完成')
