@@ -32,8 +32,12 @@ def ling_sha_santou(m_list, monit):
         # 左键点击npc,领取任务
         time.sleep(3)
         MouseUtil().left_click(190, 300)
-        time.sleep(4)
-        replenish_piece(task_flag, spare_flag, buy_flag)
+        if task_flag.times_left == 1:
+            time.sleep(19)
+            replenish_piece(task_flag, spare_flag, buy_flag)
+        else:
+            task_flag.times_left = task_flag.times_left - 1
+        save_flight_flag(lis, './' + i + '.txt')
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
 
 
@@ -41,6 +45,7 @@ def sha_heishan(m_list, monit):
     for i in m_list:
         # 打开客户端
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
+        lis = get_flight_flag_info('./' + i + '.txt')
         spare_flag = get_flag_name(lis, '备用棋')
         buy_flag = get_flag_name(lis, '长安杂货店(12,11)')
         # 杀黑山妖王
@@ -50,8 +55,12 @@ def sha_heishan(m_list, monit):
         # 左键点击npc,领取任务
         time.sleep(3)
         MouseUtil().left_click(230, 300)
-        time.sleep(4)
-        replenish_piece(task_flag, spare_flag, buy_flag)
+        if task_flag.times_left == 1:
+            time.sleep(19)
+            replenish_piece(task_flag, spare_flag, buy_flag)
+        else:
+            task_flag.times_left = task_flag.times_left - 1
+        save_flight_flag(lis, './' + i + '.txt')
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
 
 
@@ -59,6 +68,7 @@ def sha_lanse(m_list, monit):
     for i in m_list:
         # 打开客户端
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
+        lis = get_flight_flag_info('./' + i + '.txt')
         spare_flag = get_flag_name(lis, '备用棋')
         buy_flag = get_flag_name(lis, '长安杂货店(12,11)')
         # 杀蓝色妖王
@@ -68,8 +78,12 @@ def sha_lanse(m_list, monit):
         # 左键点击npc,领取任务
         time.sleep(3)
         MouseUtil().left_click(280, 240)
-        time.sleep(4)
-        replenish_piece(task_flag, spare_flag, buy_flag)
+        if task_flag.times_left == 1:
+            time.sleep(19)
+            replenish_piece(task_flag, spare_flag, buy_flag)
+        else:
+            task_flag.times_left = task_flag.times_left - 1
+        save_flight_flag(lis, './' + i + '.txt')
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
 
 
@@ -77,6 +91,7 @@ def sha_wannian(m_list, monit):
     for i in m_list:
         # 打开客户端
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
+        lis = get_flight_flag_info('./' + i + '.txt')
         spare_flag = get_flag_name(lis, '备用棋')
         buy_flag = get_flag_name(lis, '长安杂货店(12,11)')
         # 杀万年熊王
@@ -86,15 +101,19 @@ def sha_wannian(m_list, monit):
         # 左键点击npc,领取任务
         time.sleep(3)
         MouseUtil().left_click(480, 580)
-        time.sleep(4)
-        replenish_piece(task_flag, spare_flag, buy_flag)
+        if task_flag.times_left == 1:
+            time.sleep(19)
+            replenish_piece(task_flag, spare_flag, buy_flag)
+        else:
+            task_flag.times_left = task_flag.times_left - 1
         save_flight_flag(lis, './' + i + '.txt')
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
 
 
 if __name__ == '__main__':
-    for i in range(2):
+    for i in range(48):
         ling_sha_santou(lis, monitor)
         sha_heishan(lis, monitor)
         sha_lanse(lis, monitor)
         sha_wannian(lis, monitor)
+        print(i)
