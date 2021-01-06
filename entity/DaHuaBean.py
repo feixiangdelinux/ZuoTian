@@ -99,5 +99,6 @@ if __name__ == '__main__':
     # generate_flight_flag('../a979899.txt')
     # generate_flight_flag('../b979899.txt')
     # generate_flight_flag('../c979899.txt')
-    generate_flight_flag('../d979899.txt')
+    # generate_flight_flag('../d979899.txt')
+    generate_flight_flag('../e979899.txt')
     # generate_flight_flag('../f979899.txt')
