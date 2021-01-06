@@ -31,6 +31,7 @@ def zuo_tian(path, four, nineteen):
     MouseUtil().left_click(190, 300)
     time.sleep(nineteen)
     replenish_piece(task_flag, spare_flag, buy_flag)
+
     # 杀黑山妖王
     # 使用指定位置的飞行棋飞到指定位置
     task_flag = get_flag_name(lis, '御马监(100,10)')
@@ -40,6 +41,7 @@ def zuo_tian(path, four, nineteen):
     MouseUtil().left_click(230, 300)
     time.sleep(nineteen)
     replenish_piece(task_flag, spare_flag, buy_flag)
+
     # 杀蓝色妖王
     # 使用指定位置的飞行棋飞到指定位置
     task_flag = get_flag_name(lis, '御马监(105,45)')
@@ -49,6 +51,7 @@ def zuo_tian(path, four, nineteen):
     MouseUtil().left_click(280, 240)
     time.sleep(nineteen)
     replenish_piece(task_flag, spare_flag, buy_flag)
+
     # 杀万年熊王
     # 使用指定位置的飞行棋飞到指定位置
     task_flag = get_flag_name(lis, '御马监(110,100)')

@@ -11,7 +11,7 @@ from util.MouseUtil import MouseUtil
 from util.ZuoTianUtil import replenish_piece, fly_destination, click_task
 
 keyboard = Controller()
-
+list1 = ['a979899', 'b979899', 'c979899', 'd979899', 'e979899']
 # # 显示桌面
 # MouseUtil().right_click(1440, 1080)
 # keyboard.press('s')
@@ -32,7 +32,8 @@ keyboard = Controller()
 
 
 
-
+for i in list1:
+    print(list1.index(i))
 
 
 
@@ -71,4 +72,4 @@ keyboard = Controller()
 # MouseUtil().move_to(680, 170)
 # MouseUtil().move_to(260, 155)
 # MouseUtil().move_to(600, 270)
-MouseUtil().move_to(600, 320)
+# MouseUtil().move_to(600, 320)
