@@ -4,7 +4,7 @@ from pynput.keyboard import Controller
 from pynput.keyboard import Key
 
 from util.MouseUtil import MouseUtil
-from util.ZuoTianUtil import click_tool_bar
+from util.ZuoTianUtil import click_tool_bar, right_goods
 
 keyboard = Controller()
 list1 = ['a979899', 'b979899', 'c979899']
@@ -13,7 +13,6 @@ screen = [1920, 1080]
 MouseUtil().right_click(screen[0], screen[-1])
 keyboard.press('s')
 keyboard.release('s')
-
 for user in list1:
     print(list1.index(user))
     # 打开大话西游
@@ -21,7 +20,7 @@ for user in list1:
     MouseUtil().click_left_two()
     time.sleep(6)
     # 堆叠窗口
-    MouseUtil().right_click(1440 - 100, screen[-1])
+    MouseUtil().right_click(screen[0] - 100, screen[-1])
     keyboard.press('e')
     keyboard.release('e')
     MouseUtil().left_click(680, 170)
@@ -66,6 +65,7 @@ for user in list1:
     MouseUtil().left_click(350, 425)
     MouseUtil().left_click(350, 425)
     click_tool_bar(10)
+    # # 吃符吃药
     # for i in range(5):
     #     MouseUtil().left_click(315 + (i * 46), 50)
     #     if i == 0:

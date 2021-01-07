@@ -23,7 +23,7 @@ for user in list1:
     MouseUtil().click_left_two()
     time.sleep(6)
     # 堆叠窗口
-    MouseUtil().right_click(1440 - 100, screen[-1])
+    MouseUtil().right_click(screen[0] - 100, screen[-1])
     keyboard.press('e')
     keyboard.release('e')
 
