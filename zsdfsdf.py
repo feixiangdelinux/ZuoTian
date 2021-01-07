@@ -4,8 +4,10 @@ from entity.DaHuaBean import get_flight_flag_info, get_flag_name, save_flight_fl
 from util.MouseUtil import MouseUtil
 from util.ZuoTianUtil import replenish_piece, fly_destination, click_task
 
-lis = ['a979899', 'b979899', 'c979899', 'd979899', 'e979899']
+lis = ['a979899', 'b979899', 'c979899']
+# lis = ['d979899', 'e979899', 'f979899']
 monitor = [1920, 1080]
+# monitor = [1920, 1080]
 
 
 def ling_sha_santou(m_list, monit):
@@ -111,7 +113,7 @@ def sha_wannian(m_list, monit):
 
 
 if __name__ == '__main__':
-    for i in range(48):
+    for i in range(50):
         ling_sha_santou(lis, monitor)
         sha_heishan(lis, monitor)
         sha_lanse(lis, monitor)

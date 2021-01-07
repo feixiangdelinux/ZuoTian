@@ -1,15 +1,13 @@
 import time
 
-from pynput.keyboard import Controller, Key
-
 from pynput.keyboard import Controller
+from pynput.keyboard import Key
 
 from util.MouseUtil import MouseUtil
-from util.ZuoTianUtil import click_tool_bar, right_goods
+from util.ZuoTianUtil import click_tool_bar
 
 keyboard = Controller()
-list1 = ['b979899']
-# list1 = ['a979899', 'b979899', 'c979899', 'd979899', 'e979899']
+list1 = ['a979899', 'b979899', 'c979899']
 screen = [1920, 1080]
 # 显示桌面
 MouseUtil().right_click(screen[0], screen[-1])
@@ -26,7 +24,6 @@ for user in list1:
     MouseUtil().right_click(1440 - 100, screen[-1])
     keyboard.press('e')
     keyboard.release('e')
-
     MouseUtil().left_click(680, 170)
     MouseUtil().left_click(260, 155)
     MouseUtil().left_click(600, 270)
@@ -78,36 +75,3 @@ for user in list1:
     #     right_goods(4, 6)
     MouseUtil().left_click(315, 50)
     MouseUtil().left_click((list1.index(user) + 3) * 160 - 29, screen[-1] - 20)
-# MouseUtil().move_to(760, 240)
-# MouseUtil().move_to(760, 400)
-
-#  选择法术
-# MouseUtil().move_to(760, 250+(0*20))
-
-#  选择具体哪个法术
-# MouseUtil().move_to(570, 227+(2*28))
-# 移动到boss上
-# MouseUtil().move_to(150, 300)
-
-
-# MouseUtil().left_click(760, 225+(1*23))
-# MouseUtil().left_click(570, 227+(3*28))
-# MouseUtil().left_click(150, 300)
-#
-# MouseUtil().left_click(760, 225+(1*23))
-# MouseUtil().left_click(570, 227+(2*28))
-# MouseUtil().left_click(150, 300)
-#
-# MouseUtil().left_click(780, 125)
-#
-#
-# MouseUtil().left_click(760, 225+(1*23))
-# MouseUtil().left_click(570, 227+(3*28))
-# MouseUtil().left_click(150, 300)
-#
-# MouseUtil().left_click(760, 225+(1*23))
-#
-# MouseUtil().left_click(780, 125)
-
-
-# MouseUtil().move_to(150, 300)
