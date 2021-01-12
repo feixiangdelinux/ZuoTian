@@ -9,6 +9,7 @@ from util.ZuoTianUtil import replenish_piece, fly_destination, click_task
 
 
 def zuo_tian(path, four, nineteen):
+    t = time.time()
     lis = get_flight_flag_info(path)
     spare_flag = get_flag_name(lis, '备用棋')
     buy_flag = get_flag_name(lis, '长安杂货店(12,11)')
@@ -22,6 +23,9 @@ def zuo_tian(path, four, nineteen):
     time.sleep(four)
     MouseUtil().click_left()
     replenish_piece(task_flag, spare_flag, buy_flag)
+    a = time.time()
+    print(int(a) - int(t))
+    t = time.time()
     # 杀三头魔王
     # 使用指定位置的飞行棋飞到指定位置
     task_flag = get_flag_name(lis, '御马监(10,35)')
@@ -31,7 +35,9 @@ def zuo_tian(path, four, nineteen):
     MouseUtil().left_click(190, 300)
     time.sleep(nineteen)
     replenish_piece(task_flag, spare_flag, buy_flag)
-
+    a = time.time()
+    print(int(a) - int(t))
+    t = time.time()
     # 杀黑山妖王
     # 使用指定位置的飞行棋飞到指定位置
     task_flag = get_flag_name(lis, '御马监(100,10)')
@@ -41,7 +47,9 @@ def zuo_tian(path, four, nineteen):
     MouseUtil().left_click(230, 300)
     time.sleep(nineteen)
     replenish_piece(task_flag, spare_flag, buy_flag)
-
+    a = time.time()
+    print(int(a) - int(t))
+    t = time.time()
     # 杀蓝色妖王
     # 使用指定位置的飞行棋飞到指定位置
     task_flag = get_flag_name(lis, '御马监(105,45)')
@@ -51,7 +59,9 @@ def zuo_tian(path, four, nineteen):
     MouseUtil().left_click(280, 240)
     time.sleep(nineteen)
     replenish_piece(task_flag, spare_flag, buy_flag)
-
+    a = time.time()
+    print(int(a) - int(t))
+    t = time.time()
     # 杀万年熊王
     # 使用指定位置的飞行棋飞到指定位置
     task_flag = get_flag_name(lis, '御马监(110,100)')
@@ -62,6 +72,8 @@ def zuo_tian(path, four, nineteen):
     time.sleep(nineteen)
     replenish_piece(task_flag, spare_flag, buy_flag)
     save_flight_flag(lis, path)
+    a = time.time()
+    print(int(a) - int(t))
 
 
 def send_mail(message):
@@ -83,9 +95,9 @@ def send_mail(message):
 
 if __name__ == '__main__':
     t = time.time()
-    for i in range(50):
+    for i in range(1):
         # 再世情缘
-        zuo_tian('./a979899.txt', 3, 19)
+        zuo_tian('./a979899.txt', 3, 26)
 
         # # 大闹天宫
         # zuo_tian('./b979899.txt', 3, 19)
@@ -98,8 +110,5 @@ if __name__ == '__main__':
 
         # 拉尔夫
         # zuo_tian('./f979899.txt', 3, 19)
-        print(i + 1)
     a = time.time()
     print(int(a) - int(t))
-    MouseUtil().left_click(785, 15)
-    send_mail('大话西游完成')

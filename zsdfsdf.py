@@ -4,9 +4,12 @@ from entity.DaHuaBean import get_flight_flag_info, get_flag_name, save_flight_fl
 from util.MouseUtil import MouseUtil
 from util.ZuoTianUtil import replenish_piece, fly_destination, click_task
 
-lis = ['a979899', 'b979899', 'c979899']
+lis = ['a979899', 'b979899']
+# lis = ['a979899', 'b979899', 'c979899']
 # lis = ['d979899', 'e979899', 'f979899']
 monitor = [1920, 1080]
+
+
 # monitor = [1920, 1080]
 
 
@@ -35,7 +38,7 @@ def ling_sha_santou(m_list, monit):
         time.sleep(3)
         MouseUtil().left_click(190, 300)
         if task_flag.times_left == 1:
-            time.sleep(19)
+            time.sleep(26)
             replenish_piece(task_flag, spare_flag, buy_flag)
         else:
             task_flag.times_left = task_flag.times_left - 1
@@ -58,9 +61,10 @@ def sha_heishan(m_list, monit):
         time.sleep(3)
         MouseUtil().left_click(230, 300)
         if task_flag.times_left == 1:
-            time.sleep(19)
+            time.sleep(26)
             replenish_piece(task_flag, spare_flag, buy_flag)
         else:
+            time.sleep(6)
             task_flag.times_left = task_flag.times_left - 1
         save_flight_flag(lis, './' + i + '.txt')
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
@@ -81,9 +85,10 @@ def sha_lanse(m_list, monit):
         time.sleep(3)
         MouseUtil().left_click(280, 240)
         if task_flag.times_left == 1:
-            time.sleep(19)
+            time.sleep(26)
             replenish_piece(task_flag, spare_flag, buy_flag)
         else:
+            time.sleep(6)
             task_flag.times_left = task_flag.times_left - 1
         save_flight_flag(lis, './' + i + '.txt')
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
@@ -104,18 +109,21 @@ def sha_wannian(m_list, monit):
         time.sleep(3)
         MouseUtil().left_click(480, 580)
         if task_flag.times_left == 1:
-            time.sleep(19)
+            time.sleep(26)
             replenish_piece(task_flag, spare_flag, buy_flag)
         else:
+            time.sleep(6)
             task_flag.times_left = task_flag.times_left - 1
         save_flight_flag(lis, './' + i + '.txt')
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
 
 
 if __name__ == '__main__':
-    for i in range(50):
+    t = time.time()
+    for i in range(2):
         ling_sha_santou(lis, monitor)
         sha_heishan(lis, monitor)
         sha_lanse(lis, monitor)
         sha_wannian(lis, monitor)
-        print(i)
+    a = time.time()
+    print(int(a) - int(t))
