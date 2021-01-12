@@ -120,10 +120,14 @@ def sha_wannian(m_list, monit):
 
 if __name__ == '__main__':
     t = time.time()
-    for i in range(2):
+    for i in range(47):
         ling_sha_santou(lis, monitor)
         sha_heishan(lis, monitor)
         sha_lanse(lis, monitor)
         sha_wannian(lis, monitor)
+    for i in lis:
+        MouseUtil().left_click(2 * 160 - 29, monitor[-1] - 20)
+        fly_destination(4, 1)
+        MouseUtil().left_click(790, 15)
     a = time.time()
     print(int(a) - int(t))
