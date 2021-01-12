@@ -2,18 +2,18 @@ import time
 
 from entity.DaHuaBean import get_flight_flag_info, get_flag_name, save_flight_flag
 from util.MouseUtil import MouseUtil
-from util.ZuoTianUtil import replenish_piece, fly_destination, click_task
+from util.ZuoTianUtil import replenish_piece, fly_destination, click_task, click_tool_bar
 
 lis = ['a979899', 'b979899']
-# lis = ['a979899', 'b979899', 'c979899']
-# lis = ['d979899', 'e979899', 'f979899']
+# lis = ['c979899', 'd979899']
+# lis = ['e979899', 'f979899']
 monitor = [1920, 1080]
 
 
 # monitor = [1920, 1080]
 
 
-def ling_sha_santou(m_list, monit):
+def ling_sha_santou(m_list, monit, dijici):
     for i in m_list:
         # 打开客户端
         MouseUtil().left_click((m_list.index(i) + 2) * 160 - 29, monit[-1] - 20)
@@ -27,8 +27,13 @@ def ling_sha_santou(m_list, monit):
         # 左键点击npc,领取任务
         MouseUtil().left_click(310, 200)
         click_task(1)
-        time.sleep(3)
-        MouseUtil().click_left()
+        if dijici == 0:
+            time.sleep(6)
+            click_tool_bar(1)
+            click_tool_bar(1)
+        else:
+            time.sleep(3)
+            MouseUtil().click_left()
         replenish_piece(task_flag, spare_flag, buy_flag)
         # 杀三头魔王
         # 使用指定位置的飞行棋飞到指定位置
@@ -121,7 +126,7 @@ def sha_wannian(m_list, monit):
 if __name__ == '__main__':
     t = time.time()
     for i in range(47):
-        ling_sha_santou(lis, monitor)
+        ling_sha_santou(lis, monitor, i)
         sha_heishan(lis, monitor)
         sha_lanse(lis, monitor)
         sha_wannian(lis, monitor)
