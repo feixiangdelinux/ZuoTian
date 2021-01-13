@@ -34,7 +34,7 @@ def first_save_data():
         aa.total_volume_list.append(i['total_volume'])
         final_data.append(aa.__dict__)
     json_str = json.dumps(final_data, ensure_ascii=False)
-    with open('./BtcPrice.txt', "w") as f:
+    with open('../BtcPrice.txt', "w") as f:
         f.write(json_str)
 
 
@@ -110,7 +110,7 @@ def data_processing(lis):
                 j['total_volume_list'].append(i['total_volume'])
     remind_one(final_data)
     json_str = json.dumps(allPrice, ensure_ascii=False)
-    with open('./BtcPrice.txt', "w") as f:
+    with open('../BtcPrice.txt', "w") as f:
         f.write(json_str)
 
 
@@ -161,7 +161,7 @@ def dojob():
 
 
 if __name__ == '__main__':
-    f = open('./BtcPrice.txt')
+    f = open('../BtcPrice.txt')
     st = f.read()
     allPrice = json.loads(st)
     dojob()
