@@ -125,7 +125,7 @@ def sha_wannian(m_list, monit):
 
 if __name__ == '__main__':
     t = time.time()
-    for i in range(45):
+    for i in range(50):
         ling_sha_santou(lis, monitor, i)
         sha_heishan(lis, monitor)
         sha_lanse(lis, monitor)
