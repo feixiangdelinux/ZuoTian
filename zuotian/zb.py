@@ -85,7 +85,7 @@ def send_mail(message):
 
 if __name__ == '__main__':
     t = time.time()
-    for i in range(20):
+    for i in range(27):
         # 再世情缘
         # zuo_tian('./a979899.txt', 3, 26, i)
 
@@ -96,7 +96,7 @@ if __name__ == '__main__':
         # zuo_tian('./c979899.txt', 3, 19, i)
 
         # 拉尔夫
-        zuo_tian('./d979899.txt', 2, 17, i)
+        zuo_tian('./d979899.txt', 3, 19, i)
 
         # 拉尔夫
         # zuo_tian('./f979899.txt', 3, 19, i)

@@ -96,7 +96,7 @@ if __name__ == '__main__':
         # zuo_tian('./c979899.txt', 3, 19, i)
 
         # 拉尔夫
-        zuo_tian('./d979899.txt', 2, 17, i)
+        zuo_tian('zuotian/d979899.txt', 2, 17, i)
 
         # 拉尔夫
         # zuo_tian('./f979899.txt', 3, 19, i)
